@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React ,{useEffect, useRef} from "react"
+import './components/utils/style.css';
+import TextAreaComponent from './components/TextGenerator/TextAreaComponent1';
+
+import SnackbarWithDecorators from './components/utils/SnackbarWithDecorators';
+import ApiModal from './components/StickyContent/ApiKeyInputModal';
+import Dashboard from "./components/TextGenerator/Dashboard";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import MainComponent from "./components/LandingPage/MainComponent";
+import Header from "./components/Header/Header";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
+// const theme = extendTheme({ cssVarPrefix: 'demo'});
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        
+    
+      
+     
+        <ApiModal/>
+      <SnackbarWithDecorators/>
+  
+
+ 
+     <ThemeProvider theme={darkTheme}>
+      <Header/>
+      {/* <CssBaseline /> */}
+      <MainComponent/>
+      <Dashboard />
+      </ThemeProvider>
+
     </div>
   );
 }

@@ -1,0 +1,53 @@
+/* Reset styles for consistent base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* Main container */
+  .textarea-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  /* Input fields */
+  .input-field {
+    margin: 15px;
+  }
+  
+  .input-label {
+    display: block;
+    margin: 5px;
+    font-weight: bold;
+  }
+  
+  .input-box {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 2px;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  /* Text area */
+  .input-box[type="textarea"] {
+    resize: vertical; /* Allow resizing */
+  }
+  
+  /* Generate text button */
+  .generate-text-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Customize GenerateText component if needed */
+  /* ... styles for GenerateText components ... */
+  
